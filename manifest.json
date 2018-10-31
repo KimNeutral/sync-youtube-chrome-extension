@@ -1,0 +1,19 @@
+{
+    "manifest_version": 2,
+  
+    "name": "Sync Youtube",
+    "description": "chages youtube",
+    "version": "1",
+    "browser_action": {
+        "default_title": "Sync Youtube",
+        "default_icon": "icon.png",
+        "default_popup": "login-popup.html"
+    },
+    "permissions": ["storage"],
+    "content_scripts": [
+        {
+            "matches": ["https://www.youtube.com/*"],
+            "js": ["jquery-3.3.1.min.js", "background.js"]
+        }
+    ]
+  }
